@@ -1,7 +1,7 @@
 // html skeleton provider
-function template(title, initialState = {}, content = ""){
-  let scripts = ''; // Dynamically ship scripts based on render type
-  if(content){
+function template(title, initialState = {}, content = '') {
+  let scripts = '' // Dynamically ship scripts based on render type
+  if (content) {
     scripts = ` <script>
                    window.__STATE__ = ${JSON.stringify(initialState)}
                 </script>
@@ -26,9 +26,9 @@ function template(title, initialState = {}, content = ""){
 
                   ${scripts}
               </body>
-              `;
+              `
 
-  return page;
+  return page
 }
 
-module.exports = template;
+module.exports = template

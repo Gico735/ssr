@@ -1,18 +1,16 @@
-
 export const REQUEST_APPS = 'REQUEST_APPS'
 export const RECEIVE_APPS = 'RECEIVE_APPS'
 
-
 function requestApps() {
   return {
-    type: REQUEST_APPS
+    type: REQUEST_APPS,
   }
 }
 
 function receiveApps(json) {
   return {
     type: RECEIVE_APPS,
-    apps: json
+    apps: json,
   }
 }
 
@@ -27,7 +25,7 @@ function fetchApps() {
 
 function shouldFetchApps(state) {
   const apps = state.apps
-  if (apps.length==0) {
+  if (apps.length == 0) {
     return true
   } else if (state.isFetching) {
     return false
